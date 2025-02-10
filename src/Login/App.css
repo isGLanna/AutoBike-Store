@@ -1,11 +1,31 @@
+/*==========================================================================
+  DEV: Giordano Lanna
+  DATA: 28/01/2025
+  ========================================================================== */
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
 body {
-  margin: 0;
   display: flex;
-  background-color: #cbd7c9;                   /* Tela de fundo */
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
+  background-color: var(--background-color);                  /* Tela de fundo */
   z-index: -1;
+}
+
+#root {
+
+  margin-right: 12%;
+  margin-left: auto;
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color:  var(--container-background);
+  border-radius: 15px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 3;
 }
 
 .image-container {
@@ -13,65 +33,64 @@ body {
   top: 0;
   left: 0;
   width: 50%;
-  min-width: 60%;
+  min-width: 48rem;
+  max-width: 64rem;
   height: 100%;
-  background-image: url("gallery/main_menu_image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("gallery/main_menu_image.jpg") no-repeat center/cover;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
   opacity: 0.85;
   z-index: 0;
 }
 
-#root {
-  max-width: 220px;
-  max-height: 280px;
-  margin-right: 8%;
-  align-items: center;
-  margin-left: auto;
-  padding: 3rem;
+/* ==========================================================================
+   Top Bar (Barra Superior)
+   ========================================================================== */
+/* Texto para a Logo */
+.logo {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
   display: flex;
-  text-align: center;
-  background-color: #EEE;
-  border-radius: 15px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: space-between;
+  background: url("gallery/logo.png") no-repeat center/cover;
+  background: linear-gradient(to bottom, #70966a, #30482c);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
-input {
-  font-size: 1.5rem;
-  padding: 1rem;
-  border-radius: 15px;
-  border: 2px solid #cbd7c9; /* Cor da borda */
-  background-color: #f4f4f4; /* Cor de fundo mais suave */
-  outline: #cbd7c9;
-  caret-color: #333;
+.top-bar::before {
+  content:"";
+  width: 80px;
+  height: 80px;
+  background: url("gallery/logo.png") no-repeat center/contain;
+  background-size: contain;
+  display: block;
 }
 
-@media (max-width: 768px) {
-  .image-container{
-    width:100%;
-  }
 
-  #root{
-    width: 100%;
-    max-width: 0 auto;
-    max-height: 0 auto;
-    display: flex;
-    margin: 0 auto;
-    
-    justify-content: center;
-    align-items: center;
-  }
+/* ==========================================================================
+   Components
+   ========================================================================== */
 
-  .login-form input{
-    font-size: 1.5rem;
-    width: 0 auto;
-  }
 
-  .login-form button {
-    min-width: 200px;
-  }
+input {
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid var(--border-color); /* Cor da borda */
+  background-color: var(--input-background); /* Cor de fundo mais suave */
+  outline: var(--border-color);
+  caret-color: var(--text-color);
+  color: var(--text-color);
 }
 
 .login-form {
@@ -82,23 +101,101 @@ input {
 }
 
 .login-form input {
+  width: 14rem;
   padding: 0.85rem;
   font-size: 1rem;
-  border: 2px solid #cbd7c9;
-  border-radius: 15px;
   margin: 0 auto;
 }
 
 .login-form button {
-  width: 120px;
-  height: 40px;
+  min-width: 12rem;
+  height: 2.5rem;
   font-size: 1rem;
-  color: #fff;
-  background-color: #333;
-  border: none;
-  border-radius: 15px;
+  color: var(--button-text-color);
+  background-color: var(--button-background);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: var(background-color) 0.8s;
   margin: 0 auto;
+}
+
+.login-form button:hover {
+  background-color: var(--button-hover-background);
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+   @media (max-width: 768px) {
+    .image-container{
+      width:100%;
+    }
+  
+    #root{
+      width: 16rem;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .login-form input{
+      font-size: 1.2rem;
+      width: 16rem;
+    }
+  
+    .login-form button {
+      width: 12rem;
+    }
+
+    .logo {
+      position: absolute;
+      top: 3rem;
+      left: 50%;
+      color: #1b3217;
+      transform: translateX(-57%);
+      font-size: 3.5rem;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .top-bar {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+      
+    }
+
+    button {
+      margin: 0.4rem;
+      width: 28vw;
+      min-width: 8rem;
+      min-height: 0.5rem;
+      height: 3rem;
+    }
+
+    @media (max-height: 500px) {
+      .logo {
+          top: 7rem; /* Ajuste para que a logo vá para baixo */
+      }
+
+      .login-form {
+          margin-top: 4rem; /* Ajusta a posição do login para garantir espaçamento */
+      }
+    }
+  }
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+   
+:root {
+  --background-color: #cbd7c9;
+  --container-background: #EEE;
+  --border-color: #798c65;
+  --input-background: #f4f4f4;
+  --text-color: #222;
+  --button-text-color: #fff;
+  --button-background: #242;
+  --button-hover-background: #494949;
 }
 
