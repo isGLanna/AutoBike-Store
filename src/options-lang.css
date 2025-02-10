@@ -1,17 +1,36 @@
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
 #language {
-    position: relative;
-    display: inline-block;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 16;
-    cursor: pointer;
-    z-index: 3;
+position: relative;
+display: inline-block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16;
+cursor: pointer;
+z-index: 3;
 }
 
 #language button {
     padding: 10px 20px;
-    color: rgb(16, 30, 13);
+    color: var(--color-text);
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3 ease, transform 0.2 ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#language button:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root {
+    --color-text: #242;
+    --border-color: #99ac85;
+    --button-hover-background: #555;
 }

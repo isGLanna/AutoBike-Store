@@ -1,7 +1,7 @@
 :root {
   font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 1.8;
+  font-weight: 3rem;
 
   color-scheme: light dark;
   color: rgb(50, 50, 50);
@@ -26,28 +26,35 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  padding: 2rem;
   min-height: 100vh;
+  user-select: none;
+  overflow: hidden;
+  scrollbar-width: none;    /* remove no Firefox */
 }
 
+/* Informações da fonte */
 h1 {
-  font-size: 3.2em;
+  padding: 3rem;
+  font-size: 3.5rem;
   line-height: 1.1;
+  user-select: none;
 }
 
 button {
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   border-radius: 15px;
-  padding: 0.5em 1.1em;
-  font-size: 1em;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #414141;
   cursor: pointer;
   transition: border-color 0.3s;
 }
+
 button:hover {
-  border-color: #cbd7c9;
+  background-color: #484848;
 }
 
 button:focus,
@@ -58,12 +65,20 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #cbd7c9;
-    background-color: #ffffff;
+    background-color: #2d372b;
   }
+
   a:hover {
-    color: #747bff;
+    color: #6c9169;
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #6c9169;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    width: 200px;
   }
 }
