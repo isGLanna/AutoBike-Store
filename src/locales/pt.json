@@ -1,9 +1,17 @@
 {
-  "email": "E-mail",
-  "password": "Senha",
-  "sign_in": "Entrar",
-  "forgot_password": "Esqueceu a senha?",
-  "processing": "Processando",
-  "fill_in_all_fields": "Preencha todos os campos"
-}
-  
+  "translation":{
+    "home": "Início",
+
+    "e-mail": "E-mail ou usuário",
+    "ph email": "",
+    "password": "Senha",
+    "ph password": "Digite sua senha",
+
+    "sign in": "Entrar",
+
+    "create account": "criar conta",
+    "forgot password": "Esqueceu a senha?",
+    "processing": "Processando...",
+    "fill in all fields": "Preencha todos os campos"
+  }
+}  

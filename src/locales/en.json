@@ -1,9 +1,18 @@
 {
-  "email": "E-mail",
-  "password": "Password",
-  "sign_in": "Sign in",
-  "forgot_password": "Forgot password?",
-  "processing": "Processing",
-  "fill_in_all_fields": "Fill in all fields"
+ "translation": {
+    "home": "Home",
+
+    "e-mail": "E-mail or username",
+    "ph email": "",
+    "password": "Password",
+    "ph password": "Enter your password",
+
+    "sign in": "Sign in",
+
+    "create account": "create account",
+    "forgot password": "Forgot password?",
+    "processing": "Processing...",
+    "fill in all fields": "Fill in all fields"
+  }
 }
   

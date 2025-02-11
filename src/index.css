@@ -1,11 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.8;
-  font-weight: 3rem;
+  position: fixed;
 
   color-scheme: light dark;
-  color: rgb(50, 50, 50);
-  background-color: #242424;
+  color: #202020;
+  background-color: var(--background-color);
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,10 +19,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 a {
   font-weight: 550;
   color: #698565;
   text-decoration: inherit;
+  margin-top: -10px;;
 }
 a:hover {
   color: #869b82;
@@ -27,58 +35,64 @@ body {
   display: flex;
   place-items: center;
   padding: 2rem;
-  min-height: 100vh;
+  height: 100vh;
   user-select: none;
   overflow: hidden;
-  scrollbar-width: none;    /* remove no Firefox */
+  transition: 0.5s;
 }
 
 /* Informações da fonte */
 h1 {
   padding: 3rem;
   font-size: 3.5rem;
-  line-height: 1.1;
+  font-weight: 500;
+  line-height: 2;
   user-select: none;
+}
+
+h2 {
+  padding: 3rem;
+  line-height: 1.8;
+  user-select: none;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
 }
 
 button {
   border: 1px solid transparent;
   border-radius: 15px;
   padding: 0.5rem 1.1rem;
-  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #414141;
   cursor: pointer;
   transition: border-color 0.3s;
 }
 
-button:hover {
-  background-color: #484848;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #cbd7c9;
-    background-color: #2d372b;
-  }
-
-  a:hover {
-    color: #6c9169;
-  }
-
-  button {
-    background-color: #6c9169;
-  }
-}
-
 @media (max-width: 768px) {
-  h1 {
-    width: 200px;
+  h2 {
+    display: none;
+  }
+}
+
+
+/* Dark Theme */
+.dark,
+.dark header {
+  background-color: #374235;
+  color: #EEE;
+
+  --color-theme: rgb(179, 153, 60);
+  --container-form: #282828;
+  --input-form: #404840;
+
+  --gradient-top: #3e503c;
+  --gradient-bottom: #567251;
+
+  input {
+    color: #EEE;
+  }
+
+  .top-bar nav button{
+    border: 1px solid;
+    transition: 0.2s ease-in-out;
   }
 }
