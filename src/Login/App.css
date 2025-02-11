@@ -54,6 +54,13 @@ input {
   outline: var(--border-color);
   caret-color: var(--text-color);
   color: var(--text-color); /* Cor do texto */
+  transition: 0.5s ease-in-out;
+}
+
+input::placeholder {
+  font-style: italic;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .login-form {
@@ -61,11 +68,6 @@ input {
   display: flex;
   flex-direction: column;
   gap:0.6rem;
-  text-align: center;
-}
-
-.login-form::placeholder {
-  color: red;
 }
 
 .login-form input {
@@ -155,7 +157,7 @@ input {
    ========================================================================== */
   
   :root {
-    --background-color: #cbd7c9;        /* Background */
+    --background-color: #cbd7c9;          /* Background */
     --container-form: #EEE;             /* Formulário */
     --border-color: #5c6c4a;            /* Borda do formulário */
     --input-form: #f4f4f4;

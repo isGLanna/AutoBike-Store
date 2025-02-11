@@ -82,7 +82,7 @@ button {
 
   --color-theme: rgb(179, 153, 60);
   --container-form: #282828;
-  --input-form: #404840;
+  --input-form: #303830;
 
   --gradient-top: #3e503c;
   --gradient-bottom: #567251;
@@ -91,8 +91,16 @@ button {
     color: #EEE;
   }
 
+  input::placeholder {
+      color: #BBB;
+  }
+
   .top-bar nav button{
     border: 1px solid;
-    transition: 0.2s ease-in-out;
+    border-color: #AAA;
+  }
+
+  .top-bar nav .theme-toggle {
+    border-color:rgb(179, 153, 60);
   }
 }
