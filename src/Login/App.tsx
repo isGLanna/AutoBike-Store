@@ -18,7 +18,17 @@ function App() {
 
 // alterar idioma
   const handleLanguageChange = (lang: string) => {
-    i18n.changeLanguage(lang);
+    switch(lang.toLowerCase()){
+      case 'en':
+        i18n.changeLanguage('en');
+        break;
+      case 'pt':
+        i18n.changeLanguage('pt');
+        break;
+      case 'es':
+        i18n.changeLanguage('es');
+        break;
+    }
   };
 
 
@@ -74,7 +84,7 @@ function App() {
         <div className="logo" style={{ transform: `rotate(${rotation}deg)` }}></div>
         <h2 className="logo-text">AutoBike Store</h2>
         <nav>
-          <button>{t('home')}</button>
+          <button onClick={() => (window.location.href='home.html')}>{t('home')}</button>
           <button onClick={() => handleLanguageChange('en')}>EN</button>
           <button onClick={toggleTheme} className="theme-toggle">
             <i className="bi bi-sun"></i>
@@ -84,6 +94,8 @@ function App() {
     );
   };
 
+  
+// Função principal
   return (
     <div className="login-container">
       <TopBar />

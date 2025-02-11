@@ -2,7 +2,6 @@
    Top Bar (Barra Superior)
    ========================================================================== */
 /* Código para a Logo */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Raleway:wght@100;300&display=swap');
 
 .top-bar {
   position: fixed;
@@ -65,7 +64,6 @@
   display: flex;
   justify-content: center;
   color: var(--color-theme);
-  
 }
 
 
