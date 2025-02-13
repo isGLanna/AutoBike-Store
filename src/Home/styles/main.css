@@ -1,0 +1,23 @@
+
+html, 
+body {
+  display: flex;
+  direction: row;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+h1 {
+  position: absolute;
+  top: 9vw;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}

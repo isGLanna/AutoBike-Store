@@ -3,15 +3,6 @@
   DATA: 04/02/2025
   ========================================================================== */
 
-html, body {
-  
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  z-index: -1;
-}
-
 #root {
   margin-right: 10%;
   margin-left: auto;
@@ -23,7 +14,7 @@ html, body {
   background-color:  var(--container-form);
   border-radius: 15px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
   z-index: 3;
 }
 
@@ -36,7 +27,7 @@ html, body {
   min-width: 48rem;
   max-width: 64rem;
   height: 100%;
-  background: url("gallery/main_menu_image.jpg") no-repeat center/cover;
+  background: url("../gallery/main_menu_image.jpg") no-repeat center/cover;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
   opacity: 0.85;
   z-index: 0;
@@ -46,6 +37,15 @@ html, body {
    Components
    ========================================================================== */
 
+html, 
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  z-index: -1;
+}
+
 input {
   font-size: 1.5rem;
   border-radius: 15px;
@@ -54,7 +54,7 @@ input {
   outline: var(--border-color);
   caret-color: var(--text-color);
   color: var(--text-color); /* Cor do texto */
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 input::placeholder {
@@ -88,6 +88,11 @@ input::placeholder {
   margin: 0 auto;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+
+.login-form input:hover {
+  background-color: var(--input-form-hover);
 }
 
 .login-form button:hover {
@@ -150,18 +155,4 @@ input::placeholder {
       min-height: 2.5rem;
       font-size: 1.2rem;
     }
-  }
-  
-/* ==========================================================================
-   Variables
-   ========================================================================== */
-  
-  :root {
-    --background-color: #cbd7c9;          /* Background */
-    --container-form: #EEE;             /* Formulário */
-    --border-color: #5c6c4a;            /* Borda do formulário */
-    --input-form: #f4f4f4;
-    --text-color: #222;
-    --button-text-color: #fff;
-    --button-login: #242;
   }

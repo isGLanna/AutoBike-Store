@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './Login/components/App.tsx'
+import Home from './Home/components/Home.tsx'
 import './index.css'
 
 import './lib/i18n'
@@ -8,6 +8,6 @@ import './lib/i18n'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Home />
   </StrictMode>,
 )
