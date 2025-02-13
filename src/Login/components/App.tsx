@@ -5,10 +5,12 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toggleLanguage } from '../../styles/Translation.ts';
 import '../styles/App.css';
-import '../styles/option-language.css'
+import '../../styles/setting.tsx';
 import '../../styles/Topbar.css';
 import '../../styles/colors.css';
+
 
 
 function App() {
@@ -18,14 +20,12 @@ function App() {
   const [password, setPassword] = useState<string>('');
   const [message, setMessage] = useState<string>();
   const [rotation, setRotation] = useState<number>(0);
-
+ 
 // alterar idioma
-
-  const handleLanguageChange =  useCallback((language: string) => 
-    {
-    i18n.changeLanguage(language);
-    setLanguageSelected(language);
-  });
+const handleLanguageChange = useCallback(() => {
+  const newLanguage = toggleLanguage(languageSelected, i18n);
+  setLanguageSelected(newLanguage);
+}, [languageSelected, i18n]);
 
 
 // alternar temas de cor
@@ -78,7 +78,9 @@ function App() {
         <h2 className="logo-text">AutoBike Store</h2>
         <nav>
           <button onClick={() => (window.location.href='src/Home/home.html')}>{t('home')}</button>
-          <button onClick={() => handleLanguageChange('en')}>{t('lang')}</button>
+          <button onClick={handleLanguageChange}>
+            {t('language')}
+          </button>
           <button onClick={toggleTheme} className="theme-toggle">
             <i className="bi bi-sun"></i>
           </button>
@@ -93,10 +95,8 @@ function App() {
     <div className="login-container">
       <TopBar />
 
-
       <form className="login-form" onSubmit={handleLogin}>
 
-        <label htmlFor="email">{t('e-mail')}</label>
           <input
             id="email"
             type="email"
@@ -105,7 +105,6 @@ function App() {
             onChange={(e) => setEmail(e.target.value)}
         /> 
 
-        <label htmlFor="password">{t('password')}</label>
         <input
           id="password"
           type="password"
@@ -114,7 +113,8 @@ function App() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button onClick={handleLogin}>
+        <button 
+          onClick={handleLogin}>
           {t('sign in')}
         </button>
 

@@ -4,7 +4,7 @@ export default {
 
     
     "home": "Início",
-    "lang": "PT",
+    "language": "PT",
 
     "ph email": "E-mail ou usuário",
     "ph password": "Senha",
