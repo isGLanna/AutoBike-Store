@@ -19,17 +19,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-a {
-  font-weight: 550;
-  color: #698565;
-  text-decoration: inherit;
-  margin-top: -10px;;
-}
-a:hover {
-  color: #869b82;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -41,18 +30,28 @@ body {
   transition: 0.5s;
 }
 
+a {
+  font-weight: 550;
+  color: #698565;
+  text-decoration: inherit;
+  margin-top: -10px;;
+}
+a:hover {
+  color: #869b82;
+}
+
 /* Informações da fonte */
 h1 {
-  padding: 3rem;
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 2;
+  line-height: 1;
   user-select: none;
 }
 
-h2 {
-  padding: 3rem;
-  line-height: 1.8;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 2rem;
   user-select: none;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
 }
@@ -73,7 +72,6 @@ button {
   }
 }
 
-
 /* Dark Theme */
 .dark,
 .dark header {
@@ -83,9 +81,10 @@ button {
   --color-theme: rgb(179, 153, 60);
   --container-form: #282828;
   --input-form: #303830;
+  --input-form-hover: #354335;
 
-  --gradient-top: #3e503c;
-  --gradient-bottom: #567251;
+  --gradient-top: #2f3c2e;
+  --gradient-bottom: #455b41;
 
   input {
     color: #EEE;

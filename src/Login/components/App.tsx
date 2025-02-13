@@ -3,33 +3,29 @@
   DATA: 28/01/2025
   ========================================================================== */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import './App.css';
-import './topbar.css';
+import { toggleLanguage } from '../../styles/Translation.ts';
+import '../styles/App.css';
+import '../../styles/setting.tsx';
+import '../../styles/Topbar.css';
+import '../../styles/colors.css';
+
 
 
 function App() {
   const { t, i18n } = useTranslation();
+  const [languageSelected, setLanguageSelected] = useState<string>(i18n.language);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [message, setMessage] = useState<string>();
   const [rotation, setRotation] = useState<number>(0);
-
+ 
 // alterar idioma
-  const handleLanguageChange = (lang: string) => {
-    switch(lang.toLowerCase()){
-      case 'en':
-        i18n.changeLanguage('en');
-        break;
-      case 'pt':
-        i18n.changeLanguage('pt');
-        break;
-      case 'es':
-        i18n.changeLanguage('es');
-        break;
-    }
-  };
+const handleLanguageChange = useCallback(() => {
+  const newLanguage = toggleLanguage(languageSelected, i18n);
+  setLanguageSelected(newLanguage);
+}, [languageSelected, i18n]);
 
 
 // alternar temas de cor
@@ -54,17 +50,14 @@ function App() {
     );
   };
 
-// alterar idioma
-  
-
 // função de rotação da logo
   const rotateLogo = () => {
     const screenWidth = window.innerWidth;
 
     // condicional para não girar a logo em proporção de celular
-    const rotationDegree = screenWidth > 768? (screenWidth / 12) + 232 : 360;
+    const rotation = screenWidth > 768? (screenWidth / 12) + 232 : 360;
 
-    setRotation(rotationDegree);
+    setRotation(rotation);
   }
 
   useEffect(() => {
@@ -84,8 +77,10 @@ function App() {
         <div className="logo" style={{ transform: `rotate(${rotation}deg)` }}></div>
         <h2 className="logo-text">AutoBike Store</h2>
         <nav>
-          <button onClick={() => (window.location.href='home.html')}>{t('home')}</button>
-          <button onClick={() => handleLanguageChange('en')}>EN</button>
+          <button onClick={() => (window.location.href='src/Home/home.html')}>{t('home')}</button>
+          <button onClick={handleLanguageChange}>
+            {t('language')}
+          </button>
           <button onClick={toggleTheme} className="theme-toggle">
             <i className="bi bi-sun"></i>
           </button>
@@ -100,10 +95,8 @@ function App() {
     <div className="login-container">
       <TopBar />
 
-
       <form className="login-form" onSubmit={handleLogin}>
 
-        <label htmlFor="email">{t('e-mail')}</label>
           <input
             id="email"
             type="email"
@@ -112,7 +105,6 @@ function App() {
             onChange={(e) => setEmail(e.target.value)}
         /> 
 
-        <label htmlFor="password">{t('password')}</label>
         <input
           id="password"
           type="password"
@@ -121,7 +113,8 @@ function App() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button onClick={handleLogin}>
+        <button 
+          onClick={handleLogin}>
           {t('sign in')}
         </button>
 

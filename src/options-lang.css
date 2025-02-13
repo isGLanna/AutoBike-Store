@@ -2,7 +2,7 @@
    Components
    ========================================================================== */
 
-#language {
+.language {
 position: relative;
 display: inline-block;
 font-family: Arial, Helvetica, sans-serif;
@@ -11,18 +11,21 @@ cursor: pointer;
 z-index: 3;
 }
 
-#language button {
-    padding: 10px 20px;
+.language button {
+    padding: 3rem 3rem;
     color: var(--color-text);
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#language button:hover {
+.language button:hover {
     background-color: var(--color-hover);
-    transform: scale(1.05);
+    position: absolute;
+    height: 7rem;
+    width: 3rem;
+    left: 94vw;
 }
 
 /* ==========================================================================

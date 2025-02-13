@@ -1,11 +1,13 @@
-{
-  "translation":{
-    "home": "Início",
+export default {
+  "translation": {
+    "main text": "Encontre a melhor escolha para você!",
 
-    "e-mail": "E-mail ou usuário",
-    "ph email": "",
-    "password": "Senha",
-    "ph password": "Digite sua senha",
+    
+    "home": "Início",
+    "language": "PT",
+
+    "ph email": "E-mail ou usuário",
+    "ph password": "Senha",
 
     "sign in": "Entrar",
 
