@@ -25,6 +25,7 @@ body {
   place-items: center;
   padding: 2rem;
   height: 100vh;
+  -webkit-user-select: none;
   user-select: none;
   overflow: hidden;
   transition: 0.5s;
@@ -43,6 +44,7 @@ a:hover {
 /* Informações da fonte */
 h1 {
   line-height: 1;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -52,6 +54,7 @@ h4,
 h5,
 h6 {
   padding: 2rem;
+  -webkit-user-select: none;
   user-select: none;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
 }
