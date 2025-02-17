@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "./colors.css";
 
+@theme {
+  --color-giordano: #8000ff;
+}
+
 :root {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.8;
