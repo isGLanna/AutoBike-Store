@@ -60,7 +60,7 @@ function Home() {
         <div className="logo" style={{ transform: `rotate(${rotation}deg)` }}></div>
         <h2 className="logo-text">AutoBike Store</h2>
         <nav>
-          <button onClick={() => (window.location.href='index.html')}>Não Funcional</button>
+          <button onClick={() => (window.location.href='main.tsx')}>Não Funcional</button>
           <button onClick={handleLanguageChange}>
             {t('language')}
           </button>

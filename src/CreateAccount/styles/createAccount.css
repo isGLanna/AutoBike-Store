@@ -1,20 +1,17 @@
 /*==========================================================================
   DEV: Giordano Lanna
-  DATA: 04/02/2025
+  DATA: 16/02/2025
   ========================================================================== */
 
 #root {
-  margin-right: 10%;
-  margin-left: auto;
-  max-height: 19rem;
   padding: 3.5rem;
-  display: flex;
+  margin-top: 8rem;
   align-items: center;
   text-align: center;
   background-color:  var(--container-form);
   border-radius: 15px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
-  transition: 1.2s ease-in-out, 1.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   z-index: 3;
 }
 
@@ -24,31 +21,18 @@
   z-index: 10;
 }
 
-.image-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  min-width: 48rem;
-  max-width: 64rem;
-  height: 100%;
-  background: url("../gallery/main_menu_image.jpg") no-repeat center/cover;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
-  opacity: 0.85;
-  z-index: 0;
-}
-
 /* ==========================================================================
    Components
    ========================================================================== */
-
-html, 
+ 
+html,
 body {
   display: flex;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5rem;
   justify-content: center;
-  z-index: -1;
+  overflow-y: scroll;
 }
 
 input {
@@ -59,28 +43,29 @@ input {
   outline: var(--border-color);
   caret-color: var(--text-color);
   color: var(--text-color); /* Cor do texto */
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 input::placeholder {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
 .login-form {
-  max-height: 19rem;
   display: flex;
   flex-direction: column;
-  gap:0.6rem;
+  align-items: center;
+  gap:0.4rem;
+  
 }
 
 .login-form input {
-  width: 15rem;
-  height: 1rem;
-  padding: 1rem;
+  position: relative;
+  width: 16rem;
+  padding: 0.95rem;
   font-size: 1.1rem;
-  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .login-form button {
@@ -92,9 +77,10 @@ input::placeholder {
   cursor: pointer;
   transition: border-color 0.3s, background-color 0.3s;
   margin: 0 auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
+
 
 .login-form input:hover {
   background-color: var(--input-form-hover);
@@ -108,7 +94,7 @@ input::placeholder {
 .response-login-1 {
   margin-top: 0.8rem;
   font-size: medium;
-  transition: 0.4s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .response-login-0{
@@ -118,15 +104,22 @@ input::placeholder {
   color: #000;
 }
 
+/* ---------- custom scrollbar ---------- */
+
+::-webkit-scrollbar{
+  max-width: 8px;
+  width: 0.7vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #777;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
    
    @media (max-width: 720px) {
-    .image-container{
-      width:100%;
-    }
-  
     #root{
       width: 16rem;
       display: flex;
@@ -154,5 +147,13 @@ input::placeholder {
       width: 12rem;
       min-height: 2.5rem;
       font-size: 1.2rem;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    ::-webkit-scrollbar{
+      width: 5px;
     }
   }

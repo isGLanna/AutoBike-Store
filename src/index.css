@@ -12,12 +12,12 @@
   color: #202020;
   background-color: var(--background-color);
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 body {
   margin: 0;
@@ -25,8 +25,6 @@ body {
   place-items: center;
   padding: 2rem;
   height: 100vh;
-  -webkit-user-select: none;
-  user-select: none;
   overflow: hidden;
   transition: 0.5s;
 }
@@ -59,6 +57,11 @@ h6 {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
 }
 
+p {
+  -webkit-user-select:text;
+  user-select:text;
+}
+
 button {
   border: 1px solid transparent;
   border-radius: 15px;
@@ -69,7 +72,7 @@ button {
   transition: border-color 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   h2 {
     display: none;
   }
