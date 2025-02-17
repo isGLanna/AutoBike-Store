@@ -6,7 +6,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TopBar } from '../../sub-components/TopBar.tsx'
-import "../styles/App.css"
+// import "../styles/App.css"
+import { Link } from '@tanstack/react-router';
+import background from '../gallery/main_menu_image.jpg'
+import styles from './styles.module.sass'
 
 
 export default function App() {
@@ -28,9 +31,27 @@ export default function App() {
   
 // Função principal
   return (
-    <div className="login-container">
+    <div className="login-container h-[400px] pt-[80px]">
       <TopBar />
-
+      <div className='absolute top-0 h-dvh w-dvw flex'>
+        <div className='flex-1 bg-red-200'>
+          <img className='flex-1 shrink-1 h-full w-full object-cover' src={background} alt="bicicleta" />
+        </div>
+        <div className='flex-1 flex items-center justify-center'>
+          <form className={styles.form} onSubmit={handleLogin}>
+            <input type='email' placeholder='Email' />
+            <input type='password' placeholder='Senha' />
+            <input type='submit' value="Entrar" />
+            <Link to='/create-account'>
+              Crear conta
+            </Link>
+            <a rel='noopener' href='https://letmegooglethat.com/?q=Como+recuperar+minha+senha' target='_blank'>
+              Esqueci minha senha
+            </a>
+          </form>
+        </div>
+      </div>
+{/* 
       <form className="login-form" onSubmit={handleLogin}>
 
           <input
@@ -54,13 +75,12 @@ export default function App() {
           {t('sign in')}
         </button>
 
-        <a 
-          onClick={() => (window.location.href = 'src/CreateAccount/index.html')}>
+        <Link to='/create-account'>
           {t('create account')}
-        </a>
+        </Link>
 
         <a 
-          href="https://chatgpt.com/c/678ae1d3-9a48-8008-8d90-eeeca1b4c602" className="forget-password">
+          href="https://letmegooglethat.com/?q=Como+recuperar+minha+senha" className="forget-password">
           {t('forgot password')}
         </a>
 
@@ -71,7 +91,7 @@ export default function App() {
         <p className={email && password ? 'response-login-1' : 'response-login-0'}>
           {message}
         </p>
-      )}
+      )} */}
 
     </div>
   );

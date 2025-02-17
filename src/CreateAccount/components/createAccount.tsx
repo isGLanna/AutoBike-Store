@@ -1,7 +1,7 @@
 import { useState }  from 'react';
 import { useTranslation } from 'react-i18next';
 import { TopBar } from '../../sub-components/TopBar'
-import "../styles/createAccount.css"
+import "../styles/createAccount.sass"
 
 function App() {
   const { t } = useTranslation();
@@ -41,10 +41,10 @@ function App() {
   };
 
   return (
-    <div className="login-container">
+    <main>
       <TopBar />
 
-      <form className="login-form">
+      <form className="">
         <p>
           {t('Insira seu primeiro nome')}:
         </p> 
@@ -117,7 +117,10 @@ function App() {
         </p>
       )}
 
-    </div>
+<div className='w-[500px] h-[500px]' />
+<div className='w-[500px] h-[500px]' />
+
+    </main>
   );
 }
 

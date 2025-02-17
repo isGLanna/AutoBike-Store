@@ -1,0 +1,141 @@
+/*==========================================================================
+ *DEV: Giordano Lanna
+ *DATA: 16/02/2025
+ *==========================================================================
+
+// #root
+//   padding: 3.5rem
+//   margin-top: 8rem
+//   align-items: center
+//   text-align: center
+//   background-color: var(--container-form)
+//   border-radius: 15px
+//   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3)
+//   transition: 0.2s ease-in-out
+//   z-index: 3
+
+.loading
+  transition: 0.3s ease-in-out
+  background-color: rgba(0, 0, 0, 0.3)
+  z-index: 10
+
+/* ==========================================================================
+ * Components
+ * ==========================================================================
+
+// html, body
+  // display: flex
+  // width: 100vw
+  // height: 100vh
+  // margin-top: 5rem
+  // justify-content: center
+  // overflow-y: scroll
+
+input
+  font-size: 1.5rem
+  border-radius: 15px
+  border: 2px solid var(--border-color)
+
+  /* Cor da borda
+  background-color: var(--input-form)
+
+  /* Cor de fundo mais suave
+  outline: var(--border-color)
+  caret-color: var(--text-color)
+  color: var(--text-color)
+
+  /* Cor do texto
+  transition: 0.2s ease-in-out
+
+  &::placeholder
+    font-style: italic
+    font-size: 1.1rem
+    text-align: center
+
+.login-form
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 0.4rem
+
+  input
+    position: relative
+    width: 16rem
+    padding: 0.95rem
+    font-size: 1.1rem
+    margin-bottom: 0.8rem
+
+  button
+    min-width: 12rem
+    height: 2.5rem
+    font-size: 1rem
+    background-color: var(--button-login)
+    color: var(--button-text-color)
+    cursor: pointer
+    transition: border-color 0.3s, background-color 0.3s
+    margin: 0 auto
+    margin-top: 0.8rem
+    margin-bottom: 0.8rem
+
+  input:hover
+    background-color: var(--input-form-hover)
+
+  button:hover
+    background-color: #3d5635
+
+.response-login-0, .response-login-1
+  margin-top: 0.8rem
+  font-size: medium
+  transition: 1s ease-in-out
+
+.response-login-0
+  color: #B20
+
+.response-login-1
+  color: #000
+
+/* ---------- custom scrollbar ----------
+
+\::-webkit-scrollbar
+  max-width: 8px
+  width: 0.7vw
+
+\::-webkit-scrollbar-track
+  background: #777
+
+/* ==========================================================================
+ * Media Queries
+ * ==========================================================================
+
+@media (max-width: 720px)
+  // #root
+  //   width: 16rem
+  //   display: flex
+  //   margin: 0 auto
+  //   margin-bottom: 6rem
+  //   justify-content: center
+  //   align-items: center
+  //   transition: 1.2s ease-in-out, 1.2s ease-in-out
+
+  button
+    margin: 0.4rem
+    width: 28vw
+    min-width: 8rem
+    min-height: 0.5rem
+    height: 3rem
+
+  .login-form
+    input
+      font-size: 1.2rem
+      width: 17rem
+
+    button
+      width: 12rem
+      min-height: 2.5rem
+      font-size: 1.2rem
+
+  .logo
+    display: none
+
+  \::-webkit-scrollbar
+    width: 5px

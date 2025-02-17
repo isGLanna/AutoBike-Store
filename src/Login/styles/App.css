@@ -3,7 +3,7 @@
   DATA: 04/02/2025
   ========================================================================== */
 
-#root {
+/* #root {
   margin-right: 10%;
   margin-left: auto;
   max-height: 19rem;
@@ -16,7 +16,7 @@
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
   transition: 1.2s ease-in-out, 1.2s ease-in-out;
   z-index: 3;
-}
+} */
 
 .loading {
   transition: 0.3s ease-in-out;

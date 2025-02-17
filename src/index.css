@@ -1,12 +1,14 @@
-*{
+@import "tailwindcss";
+
+/* *{
   margin: 0;
   padding: 0;
-}
+} */
 
 :root {
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.8;
-  position: fixed;
+  /* position: fixed; */
 
   color-scheme: light dark;
   color: #202020;
@@ -21,19 +23,19 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  padding: 2rem;
-  height: 100vh;
-  overflow: hidden;
-  transition: 0.5s;
+  /* display: flex; */
+  /* place-items: center; */
+  /* padding: 2rem; */
+  /* height: 100vh; */
+  /* overflow: hidden; */
+  /* transition: 0.5s; */
 }
 
 a {
   font-weight: 550;
   color: #698565;
   text-decoration: inherit;
-  margin-top: -10px;;
+  margin-top: -10px;
 }
 a:hover {
   color: #869b82;
