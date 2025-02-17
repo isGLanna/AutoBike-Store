@@ -1,3 +1,4 @@
+import { RootLayout } from '@/components/templates'
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import * as React from 'react'
 
@@ -8,7 +9,9 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <React.Fragment>
-      <Outlet />
+      <RootLayout>
+        <Outlet />
+      </RootLayout>
     </React.Fragment>
   )
 }

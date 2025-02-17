@@ -8,7 +8,8 @@ interface Props {
 export function RootLayout({ children }: Props) {
   return (
     <>
-      <TopBar />{' '}
+      <TopBar />
+      <div className="mt-[80px]">{children}</div>
     </>
   )
 }

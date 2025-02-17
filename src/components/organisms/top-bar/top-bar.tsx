@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import '@/styles/topbar.css'
 import '@/styles/colors.css'
 import { toggleLanguage } from '@/styles/Translation'
+import { Link } from '@tanstack/react-router'
+import styles from './topbar.module.scss'
+import logo from '@/assets/gallery/logo.png'
 
 export const TopBar: React.FC = () => {
   const { t, i18n } = useTranslation()
@@ -40,19 +42,25 @@ export const TopBar: React.FC = () => {
   }, [])
 
   return (
-    <div className="top-bar">
-      <div
-        className="logo"
+    <div className={styles.top_bar}>
+      <img
+        alt="logo"
+        src={logo}
+        className={styles.logo}
         style={{ transform: `rotate(${rotation}deg)` }}
-      ></div>
-      <h2 className="logo-text">AutoBike Store</h2>
+      />
+      <h2 className={styles['logo-text']}>AutoBike Store</h2>
       <nav>
-        <button onClick={() => (window.location.href = 'src/Home/home.html')}>
-          {t('home')}
+        <Link to="/">{t('home')}</Link>
+        <button type="button" onClick={handleLanguageChange}>
+          {t('language')}
         </button>
-        <button onClick={handleLanguageChange}>{t('language')}</button>
-        <button onClick={toggleTheme} className="theme-toggle">
-          <i className="bi bi-sun"></i>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className={styles['theme-toggle']}
+        >
+          <i className="bi bi-sun" />
         </button>
       </nav>
     </div>

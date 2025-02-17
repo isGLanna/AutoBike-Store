@@ -5,7 +5,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toggleLanguage } from '../../styles/Translation.ts'
+import { toggleLanguage } from '../../../styles/Translation.ts'
 import '../styles/main.css'
 import '../../styles/Topbar.css'
 import '../../styles/colors.css'

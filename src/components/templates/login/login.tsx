@@ -1,14 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /*==========================================================================
   DEV: Giordano Lanna
   DATA: 28/01/2025
   ========================================================================== */
 
-import background from '@/Login/gallery/main_menu_image.jpg'
-import { TopBar } from '@/sub-components/TopBar.tsx'
-// import "../styles/App.css"
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import background from '@/assets/gallery/main_menu_image.jpg'
 import styles from './styles.module.sass'
 
 export function Login() {
@@ -26,7 +25,6 @@ export function Login() {
   // Função principal
   return (
     <div className="login-container h-[400px] pt-[80px]">
-      <TopBar />
       <div className="absolute top-0 h-dvh w-dvw flex">
         <div className="flex-1 bg-red-200">
           <img
