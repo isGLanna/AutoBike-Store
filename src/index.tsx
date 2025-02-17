@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './Login/components/App';
+import App from './Login/components/Login';
 import './index.css';
 import './lib/i18n';
 import { createRoot } from 'react-dom/client';
