@@ -12,7 +12,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to bottom, var(--gradient-top), var(--gradient-bottom));
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-top),
+    var(--gradient-bottom)
+  );
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   transition: 0.3s ease-in-out;
   z-index: 2;
@@ -29,7 +33,7 @@
   width: 80px;
   height: 80px;
   position: absolute;
-  background: url("../Login/gallery/logo.png") no-repeat center/contain;
+  background: url("../Login/gallery/logo.png") no-repeat center / contain;
   background-size: contain;
 }
 
@@ -72,7 +76,7 @@
   display: flex;
 }
 
-  /* Informações da fonte */
+/* Informações da fonte */
 h1 {
   padding: 3rem;
   font-size: 3.5rem;
@@ -83,31 +87,31 @@ h1 {
   background-color: var(--button-login);
 }
 
-  @media (max-width: 720px) {
-    .logo {
-      position: absolute;
-      padding-left: 73vw;
-      top: 590px;
-      width: 120px;
-      height: 120px;
-    }
-
-    .top-bar {
-      max-height: 8vw;
-      padding: 1rem;
-      transition: 0.3s ease-in-out;
-    }
-
-    .top-bar nav {
-      margin-right: 2rem;
-    }
-
-    .top-bar nav button {
-      margin: 1.8vw;
-    }
-
-    .top-bar h1,
-    .top-bar .text-element {
-      display:none;
-    }
+@media (max-width: 720px) {
+  .logo {
+    position: absolute;
+    padding-left: 73vw;
+    top: 590px;
+    width: 120px;
+    height: 120px;
   }
+
+  .top-bar {
+    max-height: 8vw;
+    padding: 1rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  .top-bar nav {
+    margin-right: 2rem;
+  }
+
+  .top-bar nav button {
+    margin: 1.8vw;
+  }
+
+  .top-bar h1,
+  .top-bar .text-element {
+    display: none;
+  }
+}

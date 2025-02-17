@@ -5,9 +5,8 @@ import './index.css'
 import './top.bar.css'
 import './.lib/i18n'
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Home />
-  </StrictMode>,
+  </StrictMode>
 )

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toggleLanguage } from '../styles/Translation.ts'
-import '../styles/topbar.css'
-import '../styles/colors.css'
+import '@/styles/topbar.css'
+import '@/styles/colors.css'
+import { toggleLanguage } from '@/styles/Translation'
 
 export const TopBar: React.FC = () => {
   const { t, i18n } = useTranslation()

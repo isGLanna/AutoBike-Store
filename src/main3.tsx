@@ -7,9 +7,8 @@ import './styles/Topbar.css'
 import './.lib/i18n'
 import './CreateAccount/styles/global.css'
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 )

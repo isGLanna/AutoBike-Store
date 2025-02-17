@@ -6,7 +6,7 @@
 } */
 
 :root {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   line-height: 1.8;
   /* position: fixed; */
 
@@ -19,7 +19,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
   margin: 0;
@@ -56,12 +55,13 @@ h6 {
   padding: 2rem;
   -webkit-user-select: none;
   user-select: none;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana;
 }
 
 p {
-  -webkit-user-select:text;
-  user-select:text;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 button {
@@ -84,7 +84,7 @@ button {
 .dark,
 .dark header {
   background-color: #374235;
-  color: #EEE;
+  color: #eee;
 
   --color-theme: rgb(179, 153, 60);
   --container-form: #282828;
@@ -95,19 +95,19 @@ button {
   --gradient-bottom: #455b41;
 
   input {
-    color: #EEE;
+    color: #eee;
   }
 
   input::placeholder {
-      color: #BBB;
+    color: #bbb;
   }
 
-  .top-bar nav button{
+  .top-bar nav button {
     border: 1px solid;
-    border-color: #AAA;
+    border-color: #aaa;
   }
 
   .top-bar nav .theme-toggle {
-    border-color:rgb(179, 153, 60);
+    border-color: rgb(179, 153, 60);
   }
 }
