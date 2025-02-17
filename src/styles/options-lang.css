@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+.language {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.language button {
+  padding: 3rem 3rem;
+  color: var(--color-text);
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.language button:hover {
+  background-color: var(--color-hover);
+  position: absolute;
+  height: 7rem;
+  width: 3rem;
+  left: 94vw;
+}
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root {
+  --color-text: #242;
+  --border-color: #99ac85;
+  --button-hover-background: #555;
+}

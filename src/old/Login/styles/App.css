@@ -1,0 +1,158 @@
+/*==========================================================================
+  DEV: Giordano Lanna
+  DATA: 04/02/2025
+  ========================================================================== */
+
+/* #root {
+  margin-right: 10%;
+  margin-left: auto;
+  max-height: 19rem;
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color:  var(--container-form);
+  border-radius: 15px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: 1.2s ease-in-out, 1.2s ease-in-out;
+  z-index: 3;
+} */
+
+.loading {
+  transition: 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  min-width: 48rem;
+  max-width: 64rem;
+  height: 100%;
+  background: url("../gallery/main_menu_image.jpg") no-repeat center / cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+html,
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  z-index: -1;
+}
+
+input {
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid var(--border-color); /* Cor da borda */
+  background-color: var(--input-form); /* Cor de fundo mais suave */
+  outline: var(--border-color);
+  caret-color: var(--text-color);
+  color: var(--text-color); /* Cor do texto */
+  transition: 0.3s ease-in-out;
+}
+
+input::placeholder {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.login-form {
+  max-height: 19rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.login-form input {
+  width: 15rem;
+  height: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+}
+
+.login-form button {
+  min-width: 12rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  background-color: var(--button-login);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.login-form input:hover {
+  background-color: var(--input-form-hover);
+}
+
+.login-form button:hover {
+  background-color: #3d5635;
+}
+
+.response-login-0,
+.response-login-1 {
+  margin-top: 0.8rem;
+  font-size: medium;
+  transition: 0.4s ease-in-out;
+}
+
+.response-login-0 {
+  color: #b20;
+}
+.response-login-1 {
+  color: #000;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 720px) {
+  .image-container {
+    width: 100%;
+  }
+
+  #root {
+    width: 16rem;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    justify-content: center;
+    align-items: center;
+    transition: 1.2s ease-in-out, 1.2s ease-in-out;
+  }
+
+  button {
+    margin: 0.4rem;
+    width: 28vw;
+    min-width: 8rem;
+    min-height: 0.5rem;
+    height: 3rem;
+  }
+
+  .login-form input {
+    font-size: 1.2rem;
+    width: 17rem;
+  }
+
+  .login-form button {
+    width: 12rem;
+    min-height: 2.5rem;
+    font-size: 1.2rem;
+  }
+}

@@ -1,21 +1,21 @@
 /* ==========================================================================
    Variables
    ========================================================================== */
-  
-  :root {
-    --background-color: #d4e0d2;        /* Background */
-    
-    --container-form: #EEE;             /* Formulário */
-    --border-color: #5c6c4a;            /* Borda do formulário */
-    --input-form: #f4f4f4;              /* Formulário */
-    --input-form-hover: #DDD;               
-    --text-color: #222;                 /* Texto normal */
-    --button-text-color: #fff;          /* Text do botão */
-    --button-login: #242;               /* Botão de login */
-    
-    --button-topbar: #395135;           /* Botão barra superior */
-    --gradient-top: #759770;            /* Barra superior */      
-    --gradient-bottom: #3e503b;
 
-    --color-theme: #AAB;                /* Indicador de tema */
-  }
+:root {
+  --background-color: #d4e0d2; /* Background */
+
+  --container-form: #eee; /* Formulário */
+  --border-color: #5c6c4a; /* Borda do formulário */
+  --input-form: #f4f4f4; /* Formulário */
+  --input-form-hover: #ddd;
+  --text-color: #222; /* Texto normal */
+  --button-text-color: #fff; /* Text do botão */
+  --button-login: #242; /* Botão de login */
+
+  --button-topbar: #395135; /* Botão barra superior */
+  --gradient-top: #759770; /* Barra superior */
+  --gradient-bottom: #3e503b;
+
+  --color-theme: #aab; /* Indicador de tema */
+}
