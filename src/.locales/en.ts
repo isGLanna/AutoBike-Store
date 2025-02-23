@@ -10,7 +10,7 @@ export default {
 
     'sign in': 'Sign in',
 
-    'create account': 'create account',
+    'create account': 'Create account',
     'forgot password': 'Forgot password?',
     processing: 'Processing...',
     'fill in all fields': 'Fill in all fields',

@@ -26,7 +26,7 @@ export function Login() {
   return (
     <div className="login-container h-[400px] pt-[80px]">
       <div className="absolute top-0 h-dvh w-dvw flex">
-        <div className="flex-1 bg-red-200">
+        <div>
           <img
             className="flex-1 shrink-1 h-full w-full object-cover"
             src={background}
@@ -37,18 +37,20 @@ export function Login() {
           <form className={styles.form} onSubmit={handleLogin}>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Senha" />
-            <input type="submit" value="Entrar" />
-            <Link to="/create-account">Criar conta</Link>
+            <input type="submit" value="Entrar" onClick={(handleLogin)}/>
+            <Link to="/create-account">{t('create account')}</Link>
             <a
               rel="noreferrer noopener"
               href="https://letmegooglethat.com/?q=Como+recuperar+minha+senha"
               target="_blank"
             >
-              Esqueci minha senha
+              {t('forgot password')}
             </a>
           </form>
         </div>
       </div>
+
+
       {/* 
         <form className="login-form" onSubmit={handleLogin}>
   
