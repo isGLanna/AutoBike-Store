@@ -1,10 +1,6 @@
 @import "tailwindcss";
 @import "./colors.css";
 
-@theme {
-  --color-giordano: #8000ff;
-}
-
 :root {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.8;
@@ -70,37 +66,5 @@ button {
 @media (max-width: 720px) {
   h2 {
     display: none;
-  }
-}
-
-/* Dark Theme */
-.dark,
-.dark header {
-  background-color: #374235;
-  color: #eee;
-
-  --color-theme: rgb(179, 153, 60);
-  --container-form: #282828;
-  --input-form: #303830;
-  --input-form-hover: #354335;
-
-  --gradient-top: #2f3c2e;
-  --gradient-bottom: #455b41;
-
-  input {
-    color: #eee;
-  }
-
-  input::placeholder {
-    color: #bbb;
-  }
-
-  .top-bar nav button {
-    border: 1px solid;
-    border-color: #aaa;
-  }
-
-  .top-bar nav .theme-toggle {
-    border-color: rgb(179, 153, 60);
   }
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import '@/styles/colors.css'
 import { toggleLanguage } from '@/styles/Translation'
 import { Link } from '@tanstack/react-router'
+import { ImCog } from "react-icons/im";
 import styles from './topbar.module.scss'
+import '@/styles/colors.css'
 import logo from '@/assets/gallery/logo.png'
+
 
 export const TopBar: React.FC = () => {
   const { t, i18n } = useTranslation()
@@ -43,15 +45,15 @@ export const TopBar: React.FC = () => {
 
   return (
     <div className={styles.top_bar}>
-      <img
-        alt="logo"
-        src={logo}
-        className={styles.logo}
-        style={{ transform: `rotate(${rotation}deg)` }}
-      />
+      <Link to='/create-account'>
+        <img
+          alt="logo"
+          src={logo}
+          className={styles.logo}
+          style={{ transform: `rotate(${rotation}deg)` }}/>
+      </Link>
       <h2 className={styles['logo-text']}>AutoBike Store</h2>
       <nav>
-        <Link to="/">{t('home')}</Link>
         <button type="button" onClick={handleLanguageChange}>
           {t('language')}
         </button>
@@ -59,8 +61,12 @@ export const TopBar: React.FC = () => {
           type="button"
           onClick={toggleTheme}
           className={styles['theme-toggle']}
-        >
+        > 
           <i className="bi bi-sun" />
+        </button>
+
+        <button style={{ color: '#bdb', background: 'transparent'}}>
+        <ImCog size={'30px'} />
         </button>
       </nav>
     </div>

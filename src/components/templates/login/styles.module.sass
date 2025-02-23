@@ -6,28 +6,42 @@
   display: flex
   flex-direction: column
   align-items: center
-  gap: 20px
 
   input[type=email], input[type=password]
-    border: 2px solid green
+    border: 2px solid var(--border-color)
     border-radius: 15px
     height: 50px
     width: 250px
     padding: 0 15px
+    margin-bottom: 20px
     transition: 200ms background-color
 
+    &::placeholder
+      color: var(--placeholder)
+
     &:focus-visible
-      outline: 2px solid #00c000
+      outline: 1px solid #009000
   
     &:hover
       background-color: #00000020
 
   input[type=submit]
-    border: 2px solid green
-    border-radius: 15px
-    height: 50px
-    width: 250px
+    border-radius: 10px
+    height: 45px
+    width: 110px
     padding: 0 15px
-    transition: 200ms background-color
-    background: green
+    transition: 0.2s width
+    background: var(--button-login)
+    margin-bottom: 15px
     color: white
+
+  a
+    margin-bottom: 5px
+
+@media(max-width: 720px)
+  .form
+
+    input[type=submit]
+      width: 180px
+      transition:  200ms ease-in-out
+
