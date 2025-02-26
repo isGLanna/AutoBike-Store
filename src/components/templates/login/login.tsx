@@ -8,7 +8,7 @@ import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import background from '@/assets/gallery/main_menu_image.jpg'
-import styles from './styles.module.sass'
+import styles from '../../molecules/fomulario/styles.module.sass'
 
 export function Login() {
   const { t } = useTranslation()
@@ -34,7 +34,8 @@ export function Login() {
           />
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <form className={styles.form} onSubmit={handleLogin}>
+          <form className={styles.form} style={{top: '60px'}} onSubmit={handleLogin}>
+            <h1 style={{fontSize: '32px'}}>Login</h1>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Senha" />
             <input type="submit" value="Entrar" onClick={(handleLogin)}/>

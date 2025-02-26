@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { TopBar } from '../../sub-components/TopBar'
 // import "../styles/createAccount.sass"
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
 
   return (
     <main>
-      <TopBar />
 
       <form className="">
         <p>{t('Insira seu primeiro nome')}:</p>

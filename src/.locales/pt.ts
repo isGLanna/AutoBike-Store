@@ -1,5 +1,13 @@
 export default {
   translation: {
+    CreateAccount: 'Criar conta',
+    name: 'Nome',
+    surname: 'Sobrenome',
+    username: 'Nome de usuário',
+    email: 'E-mail',
+    password: 'Senha',
+    passwordconfirmation: 'Confirmação de senha',
+    
     'main text': 'Encontre a melhor escolha para você!',
 
     home: 'Início',
