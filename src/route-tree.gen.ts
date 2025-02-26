@@ -11,10 +11,17 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ProductStoreImport } from './routes/product-store'
 import { Route as CreateAccountImport } from './routes/create-account'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ProductStoreRoute = ProductStoreImport.update({
+  id: '/product-store',
+  path: '/product-store',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const CreateAccountRoute = CreateAccountImport.update({
   id: '/create-account',
@@ -46,6 +53,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CreateAccountImport
       parentRoute: typeof rootRoute
     }
+    '/product-store': {
+      id: '/product-store'
+      path: '/product-store'
+      fullPath: '/product-store'
+      preLoaderRoute: typeof ProductStoreImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -54,36 +68,41 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/create-account': typeof CreateAccountRoute
+  '/product-store': typeof ProductStoreRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/create-account': typeof CreateAccountRoute
+  '/product-store': typeof ProductStoreRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/create-account': typeof CreateAccountRoute
+  '/product-store': typeof ProductStoreRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/create-account'
+  fullPaths: '/' | '/create-account' | '/product-store'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/create-account'
-  id: '__root__' | '/' | '/create-account'
+  to: '/' | '/create-account' | '/product-store'
+  id: '__root__' | '/' | '/create-account' | '/product-store'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CreateAccountRoute: typeof CreateAccountRoute
+  ProductStoreRoute: typeof ProductStoreRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CreateAccountRoute: CreateAccountRoute,
+  ProductStoreRoute: ProductStoreRoute,
 }
 
 export const routeTree = rootRoute
@@ -97,7 +116,8 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/create-account"
+        "/create-account",
+        "/product-store"
       ]
     },
     "/": {
@@ -105,6 +125,9 @@ export const routeTree = rootRoute
     },
     "/create-account": {
       "filePath": "create-account.tsx"
+    },
+    "/product-store": {
+      "filePath": "product-store.tsx"
     }
   }
 }

@@ -104,19 +104,7 @@ input::placeholder {
   background-color: #3d5635;
 }
 
-.response-login-0,
-.response-login-1 {
-  margin-top: 0.8rem;
-  font-size: medium;
-  transition: 0.4s ease-in-out;
-}
 
-.response-login-0 {
-  color: #b20;
-}
-.response-login-1 {
-  color: #000;
-}
 
 /* ==========================================================================
    Media Queries

@@ -12,11 +12,13 @@ export const TopBar: React.FC = () => {
   const [languageSelected, setLanguageSelected] = useState<string>(i18n.language);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
+  // Alterar idioma
   const handleLanguageChange = useCallback(() => {
     const newLanguage = toggleLanguage(languageSelected, i18n);
     setLanguageSelected(newLanguage);
   }, [languageSelected, i18n]);
 
+  // Alterar tema de cores
   const toggleTheme = () => {
     setTheme(currentTheme => (currentTheme === 'light' ? 'dark' : 'light'));
   };

@@ -1,5 +1,15 @@
+import { CreateAccount } from "@/components/templates";
+
 export default {
   translation: {
+    CreateAccount: 'Créer un compte',
+    name: 'Prénom',
+    surname: 'Nom de famille',
+    username: "Nom d'utilisateur",
+    email: 'E-mail',
+    password: 'Mot de passe',
+    passwordconfirmation: 'Confirmation du mot de passe',
+    
     'main text': 'Trouvez le meilleur choix pour vous!',
 
     home: 'Accueil',
