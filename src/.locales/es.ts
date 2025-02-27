@@ -7,7 +7,8 @@ export default {
     email: 'Correo electrónico',
     password: 'Contraseña',
     passwordconfirmation: 'Confirmación de contraseña',
-    
+    create: 'crear',
+
     'main text': '¡Encuentra la mejor opción para ti!',
 
     home: 'Inicio',

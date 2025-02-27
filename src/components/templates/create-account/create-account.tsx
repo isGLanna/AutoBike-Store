@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from "react-i18next"
 import { useState } from 'react'
 import styles from '../../molecules/fomulario/styles.module.sass'
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 export function CreateAccount() {
   const { t } = useTranslation();
@@ -29,9 +30,15 @@ export function CreateAccount() {
   }
   
   return (
-    <div className="flex items-center justify-center pt-[50px]">
+    <div className="flex items-center justify-center pt-[50px] relative">
+      <Link to='/'>
+        <BsFillArrowLeftCircleFill
+          size="35px" 
+          className="fixed left-[calc(5vw-20px)] top-27 rounded-full transform -translate-y-1/2"
+        />
+      </Link>
       <form className={styles.form} onSubmit={handleAccount}>
-        <h1 style={{ fontSize: '32px', marginBottom: '-15px', marginTop: '-15px'}}>{t('CreateAccount')}</h1>
+        <h1 style={{ fontSize: '32px', marginBottom: '-25px', marginTop: '-15px', textShadow: '1px 0px 1px black'}}>{t('CreateAccount')}</h1>
         {Object.keys(user).map((key) => (
           <div key={key}>
             <p style={{textAlign: 'center', marginBottom: '8px'}}>{t(key)}</p>
