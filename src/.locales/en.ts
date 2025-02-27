@@ -8,6 +8,7 @@ export default {
     email: 'Email',
     password: 'Password',
     passwordconfirmation: 'Confirm password',
+    create: 'create',
     
     'main text': 'Find the best choice for you',
 

@@ -1,7 +1,7 @@
 import { i18n } from 'i18next'
 
 // Array contendo os códigos dos idiomas suportados
-const languages = ['pt', 'en', 'es', 'fr']
+const languages = ['pt', 'en', 'es']
 
 // Função para alternar idiomas
 export const toggleLanguage = (currentLanguage: string, i18n: i18n): string => {
