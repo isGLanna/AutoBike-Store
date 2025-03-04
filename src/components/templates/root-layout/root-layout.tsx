@@ -9,7 +9,7 @@ export function RootLayout({ children }: Props) {
   return (
     <>
       <TopBar />
-      <div className="mt-[80px] bg-giordano">{children}</div>
+      <div className="mt-[60px] relative">{children}</div>
     </>
   )
 }

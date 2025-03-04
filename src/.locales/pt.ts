@@ -7,12 +7,13 @@ export default {
     email: 'E-mail',
     password: 'Senha',
     passwordconfirmation: 'Confirmação de senha',
-    create: 'criar',
+    create: 'Criar',
 
     'main text': 'Encontre a melhor escolha para você!',
 
     home: 'Início',
     language: 'PT',
+    tutorials: 'Tutorial',
 
     'ph email': 'E-mail ou usuário',
     'ph password': 'Senha',

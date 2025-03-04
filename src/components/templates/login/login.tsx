@@ -15,7 +15,7 @@ export function Login() {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [message, setMessage] = useState<string>()
-  const showLogo = true;
+  const [isHidden, setIsHidden] = useState<boolean>(true)
 
   // resposta para entrada de login do usuário
   const handleLogin = (e: React.FormEvent) => {
@@ -25,22 +25,22 @@ export function Login() {
 
   // Função principal
   return (
-    <div className="login-container h-[400px] pt-[80px]">
-      <div className="absolute top-0 h-dvh w-dvw flex">
-        <div>
+    <div className="login-container">
+      <div className="fixed top-15 h-dvh w-dvw flex">
+        <div className="transition-all duration-300 ease-in-out w-[calc(70vw-350px)]">
           <img
-            className="flex-1 shrink-1 h-full w-full object-cover"
+            className=" h-full object-cover"
             src={background}
             alt="bicicleta"
           />
         </div>
         
-        <div className="flex-1 flex items-center justify-center">
-          <form className={styles.form} style={{top: '60px'}} onSubmit={handleLogin}>
+        <div className="flex-1 flex items-center justify-center bg-[var(--background-color)]">
+          <form className={styles.form} onSubmit={handleLogin}>
             <h1 style={{fontSize: '32px', marginBottom: '-20px', textShadow: '1px 0px 1px black'}}>Login</h1>
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <input type="submit" value="Entrar" onClick={(handleLogin)}/>
+            <input type="password" placeholder={t('password')} />
+            <input type="submit" value={t('sign in')} onClick={(handleLogin)}/>
             <Link to="/create-account">{t('create account')}</Link>
             <a
               rel="noreferrer noopener"

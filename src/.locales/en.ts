@@ -8,12 +8,13 @@ export default {
     email: 'Email',
     password: 'Password',
     passwordconfirmation: 'Confirm password',
-    create: 'create',
+    create: 'Create',
     
     'main text': 'Find the best choice for you',
 
     home: 'Home',
     language: 'EN',
+    tutorials: 'Tutorial',
 
     'ph email': 'E-mail or username',
     'ph password': 'Password',

@@ -25,6 +25,7 @@
       color: var(--placeholder)
 
     &:focus-visible
+      transition: 200ms ease-in
       outline: 1px solid #009000
   
     &:hover
@@ -48,10 +49,15 @@
   a
     margin-bottom: 5px
 
-@media(max-width: 720px)
+@media(max-width: 700px)
+  .form
+    
+    input[type=submit]
+      transition:  300ms ease-in
+
+@media(max-width: 520px)
   .form
     
     input[type=submit]
       width: 180px
       transition:  300ms ease-in
-

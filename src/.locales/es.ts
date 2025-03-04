@@ -7,17 +7,18 @@ export default {
     email: 'Correo electrónico',
     password: 'Contraseña',
     passwordconfirmation: 'Confirmación de contraseña',
-    create: 'crear',
+    create: 'Crear',
 
     'main text': '¡Encuentra la mejor opción para ti!',
 
     home: 'Inicio',
     language: 'ES',
+    tutorials: 'Tutorial',
 
     'ph email': 'Correo electrónico o usuario',
     'ph password': 'Contraseña',
 
-    'sign in': 'Iniciar sesión',
+    'sign in': 'Iniciar',
 
     'create account': 'Crear cuenta',
     'forgot password': '¿Olvidaste tu contraseña?',

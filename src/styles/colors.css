@@ -4,40 +4,44 @@
 
 :root {
   --background-color: #d4e0d2; /* Background */
-  
+
   --container-form: #eee; /* Formulário */
   --border-color: #352; /* Borda do formulário / hover submit*/
   --placeholder: #666;
-  --input-form: #f4f4f4; /* Formulário */
+
   --input-form-hover: #ddd;
   --text-color: #222; /* Texto normal */
-  --button-text-color: #fff; /* Text do botão */
+  --button-text-color: #eee; /* Text do botão */
   --button-login: #242; /* Botão de login */
   
   --button-topbar: #395135; /* Botão barra superior */
-  --gradient-top: #759770; /* Barra superior */
-  --gradient-bottom: #3e503b;
+  --gradient-top: #75b270; /* Barra superior */
+  --gradient-bottom: #3e533b;
   
-    
-  --color-theme: #aab; /* Indicador de tema */
+  --settings-menu: #1b0b0b80; /* Menu das configurações */
+
+  --shadow: #333;      /* Sombreamento */
+  --color-theme: #ccf; /* Indicador de tema */
 }
   
   
   /* Dark Theme */
 .dark,
 .dark header  {
-  background-color: #374235;
+  --background-color: #374235;
   color: #eee;
   
   --container-form: #282828;
-  --color-theme: rgb(179, 153, 60);
+  --color-theme: #c8a028;
   
-  --input-form: #303830;
   --input-form-hover: #354335;
   
-  --gradient-top: #2f3c2e;
-  --gradient-bottom: #455b41;
+  --gradient-top: #2f382e;
+  --gradient-bottom: #456741;
+
+  --settings-menu: #dddddd80;
   
+  --shadow: #777;
   --placeholder: #BBB;
 }
   

@@ -1,26 +1,21 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toggleLanguage } from '@/styles/Translation'
 import { Link } from '@tanstack/react-router'
-import { ImCog } from "react-icons/im";
+import { toggleSettings }  from '../../molecules/fomulario/settings/settings'
+
 import styles from './topbar.module.scss'
 import '@/styles/colors.css'
 import logo from '@/assets/gallery/logo.png'
 
 
+
 export const TopBar: React.FC = () => {
   const { t, i18n } = useTranslation()
   const [rotation, setRotation] = useState<number>(0)
-  const [languageSelected, setLanguageSelected] = useState<string>(
-    i18n.language
-  )
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
 
-  const handleLanguageChange = useCallback(() => {
-    const newLanguage = toggleLanguage(languageSelected, i18n)
-    setLanguageSelected(newLanguage)
-  }, [languageSelected, i18n])
-
+  // Alterar o tema de cores
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'))
   }
@@ -29,6 +24,7 @@ export const TopBar: React.FC = () => {
     document.body.className = theme
   }, [theme])
 
+  // Efetuar rotação da logo
   const rotateLogo = () => {
     const screenWidth = window.innerWidth
     const rotation = screenWidth > 720 ? screenWidth / 12 + 232 : 360
@@ -54,20 +50,16 @@ export const TopBar: React.FC = () => {
       </Link>
       <h2 className={styles['logo-text']}>AutoBike Store</h2>
       <nav>
-        <button type="button" onClick={handleLanguageChange}>
-          {t('language')}
+        <button 
+          style={{borderLeft:'2px solid #ffffff60'}} onClick={() => toggleLanguage('pt', i18n)}>
+          {t('about us')}
         </button>
         <button
-          type="button"
-          onClick={toggleTheme}
-          className={styles['theme-toggle']}
-        > 
-          <i className="bi bi-sun" />
+          style={{borderLeft:'2px solid #ffffff60'}}> 
+          {t('tutorials')}
         </button>
 
-        <button style={{ color: '#bdb', background: 'transparent'}}>
-        <ImCog size={'30px'} />
-        </button>
+        {toggleSettings()}
       </nav>
     </div>
   )
