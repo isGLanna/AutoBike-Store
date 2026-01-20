@@ -1,0 +1,12 @@
+server:
+  port:8080
+
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  datasource:
+  url: jdbc:postgresql://localhost:5432/autobike_store
+  username: postgres
+  password: !+@_#)
+    

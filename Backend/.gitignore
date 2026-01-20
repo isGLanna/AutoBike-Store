@@ -1,0 +1,15 @@
+# Java e Compilação
+/bin/
+/build/
+.gradle/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Segredos
+.env
+
+# Log files
+*.log
